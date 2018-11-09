@@ -1,0 +1,7 @@
+S,A,B,K
+a,b,c
+A,K
+S b A
+S b B
+A a B
+B c K

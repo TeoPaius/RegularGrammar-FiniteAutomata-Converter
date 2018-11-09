@@ -1,0 +1,7 @@
+S,A,B
+a,b,c
+S - a A
+S - b B
+S - eps
+A - a A
+B - b
