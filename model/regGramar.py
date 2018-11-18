@@ -138,6 +138,8 @@ class RegGrammar:
                     automata.F.append('K')
                     automata.Q.append('K')
                     hasK = True
+                if i.right == "eps":
+                    automata.F.append(self.S)
             if len(i.right) == 2:
                 t.right = i.right[1]
                 t.symbol = i.right[0]

@@ -1,10 +1,6 @@
 import sys
 
 
-
-
-
-
 class Transition:
     def __init__(self, left= None, right = None, symbol = None):
         self.left = left
@@ -113,6 +109,16 @@ class FiniteAuto:
             prod.left = [i.left]
             prod.right = [i.symbol, i.right]
             grammar.P.append(prod)
+            if i.right == 'K':
+                prod2 = Production()
+                prod2.left = [i.left]
+                prod2.right = [i.symbol]
+                grammar.P.append(prod2)
+
+        if self.q0 in self.F:
+            prod = Production()
+            prod.left = self.q0
+            prod.right = ["eps"]
 
         return grammar
 
